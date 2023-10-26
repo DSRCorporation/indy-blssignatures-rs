@@ -1,7 +1,9 @@
 use std::borrow::Cow;
 use std::fmt::{self, Display, Formatter};
 
-#[derive(Clone, Debug, PartialEq, Eq)]
+use failure::Fail;
+
+#[derive(Clone, Debug, PartialEq, Eq, Fail)]
 /// The standard crate error type
 pub struct Error(Cow<'static, str>);
 
